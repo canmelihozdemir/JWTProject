@@ -116,7 +116,10 @@
         },
         "runtime": {
           "bin/placeholder/JWTProject.Shared.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
