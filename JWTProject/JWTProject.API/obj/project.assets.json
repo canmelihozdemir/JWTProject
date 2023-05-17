@@ -107,6 +107,52 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "JWTProject.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/JWTProject.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWTProject.Core.dll": {}
+        }
+      },
+      "JWTProject.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "JWTProject.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/JWTProject.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWTProject.Repository.dll": {}
+        }
+      },
+      "JWTProject.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "JWTProject.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/JWTProject.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWTProject.Service.dll": {}
+        }
+      },
+      "JWTProject.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/JWTProject.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWTProject.Shared.dll": {}
+        }
       }
     }
   },
@@ -451,10 +497,32 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "JWTProject.Core/1.0.0": {
+      "type": "project",
+      "path": "../JWTProject.Core/JWTProject.Core.csproj",
+      "msbuildProject": "../JWTProject.Core/JWTProject.Core.csproj"
+    },
+    "JWTProject.Repository/1.0.0": {
+      "type": "project",
+      "path": "../JWTProject.Repository/JWTProject.Repository.csproj",
+      "msbuildProject": "../JWTProject.Repository/JWTProject.Repository.csproj"
+    },
+    "JWTProject.Service/1.0.0": {
+      "type": "project",
+      "path": "../JWTProject.Service/JWTProject.Service.csproj",
+      "msbuildProject": "../JWTProject.Service/JWTProject.Service.csproj"
+    },
+    "JWTProject.Shared/1.0.0": {
+      "type": "project",
+      "path": "../JWTProject.Shared/JWTProject.Shared.csproj",
+      "msbuildProject": "../JWTProject.Shared/JWTProject.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "JWTProject.Service >= 1.0.0",
+      "JWTProject.Shared >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.4",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -485,7 +553,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Service\\JWTProject.Service.csproj": {
+              "projectPath": "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Service\\JWTProject.Service.csproj"
+            },
+            "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Shared\\JWTProject.Shared.csproj": {
+              "projectPath": "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Shared\\JWTProject.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

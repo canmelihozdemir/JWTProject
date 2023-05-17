@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\JWTMiniApp1.API.props" />
+</Project>

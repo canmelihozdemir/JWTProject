@@ -1,0 +1,12 @@
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\bin\Debug\net7.0\JWTProject.Service.deps.json
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\bin\Debug\net7.0\JWTProject.Service.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\bin\Debug\net7.0\JWTProject.Service.pdb
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\JWTProject.Service.csproj.AssemblyReference.cache
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\JWTProject.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\JWTProject.Service.AssemblyInfoInputs.cache
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\JWTProject.Service.AssemblyInfo.cs
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\JWTProject.Service.csproj.CoreCompileInputs.cache
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\JWTProject.Service.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\refint\JWTProject.Service.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\JWTProject.Service.pdb
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Service\obj\Debug\net7.0\ref\JWTProject.Service.dll

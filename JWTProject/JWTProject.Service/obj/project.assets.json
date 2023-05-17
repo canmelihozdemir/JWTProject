@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "JWTProject.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/JWTProject.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWTProject.Core.dll": {}
+        }
+      },
+      "JWTProject.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "JWTProject.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/JWTProject.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWTProject.Repository.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "JWTProject.Core/1.0.0": {
+      "type": "project",
+      "path": "../JWTProject.Core/JWTProject.Core.csproj",
+      "msbuildProject": "../JWTProject.Core/JWTProject.Core.csproj"
+    },
+    "JWTProject.Repository/1.0.0": {
+      "type": "project",
+      "path": "../JWTProject.Repository/JWTProject.Repository.csproj",
+      "msbuildProject": "../JWTProject.Repository/JWTProject.Repository.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "JWTProject.Repository >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Melih\\.nuget\\packages\\": {}
@@ -33,7 +70,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Repository\\JWTProject.Repository.csproj": {
+              "projectPath": "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Repository\\JWTProject.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
