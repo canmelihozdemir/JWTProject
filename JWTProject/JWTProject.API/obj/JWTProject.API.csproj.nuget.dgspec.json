@@ -102,7 +102,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Shared\\JWTProject.Shared.csproj": {
+                "projectPath": "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Shared\\JWTProject.Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

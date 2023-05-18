@@ -320,6 +320,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "JWTProject.Shared": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5"
         },
         "compile": {
@@ -341,6 +342,19 @@
         "runtime": {
           "bin/placeholder/JWTProject.Repository.dll": {}
         }
+      },
+      "JWTProject.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/JWTProject.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JWTProject.Shared.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -796,6 +810,11 @@
       "type": "project",
       "path": "../JWTProject.Repository/JWTProject.Repository.csproj",
       "msbuildProject": "../JWTProject.Repository/JWTProject.Repository.csproj"
+    },
+    "JWTProject.Shared/1.0.0": {
+      "type": "project",
+      "path": "../JWTProject.Shared/JWTProject.Shared.csproj",
+      "msbuildProject": "../JWTProject.Shared/JWTProject.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
