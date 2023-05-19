@@ -10,3 +10,10 @@ C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\obj\Debug\net7.0\refint\JWTProject.Repository.dll
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\obj\Debug\net7.0\JWTProject.Repository.pdb
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\obj\Debug\net7.0\ref\JWTProject.Repository.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\bin\Debug\net7.0\JWTProject.Repository.runtimeconfig.json
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\bin\Debug\net7.0\JWTProject.Core.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\bin\Debug\net7.0\JWTProject.Shared.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\bin\Debug\net7.0\JWTProject.Core.pdb
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\bin\Debug\net7.0\JWTProject.Shared.pdb
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\obj\Debug\net7.0\JWTProject.Repository.csproj.CopyComplete
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Repository\obj\Debug\net7.0\JWTProject.Repository.genruntimeconfig.cache

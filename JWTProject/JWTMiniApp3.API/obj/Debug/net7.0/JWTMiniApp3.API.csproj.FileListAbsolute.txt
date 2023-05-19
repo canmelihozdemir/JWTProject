@@ -31,3 +31,5 @@ C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp3.API\obj\De
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp3.API\obj\Debug\net7.0\JWTMiniApp3.API.pdb
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp3.API\obj\Debug\net7.0\JWTMiniApp3.API.genruntimeconfig.cache
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp3.API\obj\Debug\net7.0\ref\JWTMiniApp3.API.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp3.API\bin\Debug\net7.0\JWTProject.Shared.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp3.API\bin\Debug\net7.0\JWTProject.Shared.pdb

@@ -10,3 +10,6 @@ C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Core\obj\De
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Core\obj\Debug\net7.0\refint\JWTProject.Core.dll
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Core\obj\Debug\net7.0\JWTProject.Core.pdb
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Core\obj\Debug\net7.0\ref\JWTProject.Core.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Core\bin\Debug\net7.0\JWTProject.Shared.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Core\bin\Debug\net7.0\JWTProject.Shared.pdb
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.Core\obj\Debug\net7.0\JWTProject.Core.csproj.CopyComplete
