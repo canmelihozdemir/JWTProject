@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTProject.API", "JWTProject.API\JWTProject.API.csproj", "{CF53C698-8608-4017-BA23-7B280944082C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTProject.Core", "JWTProject.Core\JWTProject.Core.csproj", "{8FCF0C98-EDEA-4846-B31A-94E3F3DE770E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTProject.Core", "JWTProject.Core\JWTProject.Core.csproj", "{8FCF0C98-EDEA-4846-B31A-94E3F3DE770E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTProject.Repository", "JWTProject.Repository\JWTProject.Repository.csproj", "{4D9B8F68-740B-4CE0-8A09-CD030F31EB2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTProject.Repository", "JWTProject.Repository\JWTProject.Repository.csproj", "{4D9B8F68-740B-4CE0-8A09-CD030F31EB2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTProject.Service", "JWTProject.Service\JWTProject.Service.csproj", "{D46DABA6-8304-4D0B-8FF2-1A8102F08DA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTProject.Service", "JWTProject.Service\JWTProject.Service.csproj", "{D46DABA6-8304-4D0B-8FF2-1A8102F08DA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTMiniApp2.API", "JWTMiniApp2.API\JWTMiniApp2.API.csproj", "{01BFF108-A06D-4FE8-BD28-DBCF1C3D5269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTMiniApp2.API", "JWTMiniApp2.API\JWTMiniApp2.API.csproj", "{01BFF108-A06D-4FE8-BD28-DBCF1C3D5269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTMiniApp3.API", "JWTMiniApp3.API\JWTMiniApp3.API.csproj", "{F0897100-D6AE-4161-9161-102BA4E20E05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTMiniApp3.API", "JWTMiniApp3.API\JWTMiniApp3.API.csproj", "{F0897100-D6AE-4161-9161-102BA4E20E05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTMiniApp1.API", "JWTMiniApp1.API\JWTMiniApp1.API.csproj", "{D951EBFB-4C32-4B47-9392-6D814140023B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTMiniApp1.API", "JWTMiniApp1.API\JWTMiniApp1.API.csproj", "{D951EBFB-4C32-4B47-9392-6D814140023B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTProject.Shared", "JWTProject.Shared\JWTProject.Shared.csproj", "{3F3B8196-C72E-410E-BC6F-E4CAAFE7BF57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTProject.Shared", "JWTProject.Shared\JWTProject.Shared.csproj", "{3F3B8196-C72E-410E-BC6F-E4CAAFE7BF57}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTProject.API", "JWTProject.API\JWTProject.API.csproj", "{FE258D64-5468-4959-86D8-2BC2B1AAEA76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CF53C698-8608-4017-BA23-7B280944082C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF53C698-8608-4017-BA23-7B280944082C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF53C698-8608-4017-BA23-7B280944082C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF53C698-8608-4017-BA23-7B280944082C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8FCF0C98-EDEA-4846-B31A-94E3F3DE770E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FCF0C98-EDEA-4846-B31A-94E3F3DE770E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FCF0C98-EDEA-4846-B31A-94E3F3DE770E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{3F3B8196-C72E-410E-BC6F-E4CAAFE7BF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F3B8196-C72E-410E-BC6F-E4CAAFE7BF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F3B8196-C72E-410E-BC6F-E4CAAFE7BF57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE258D64-5468-4959-86D8-2BC2B1AAEA76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE258D64-5468-4959-86D8-2BC2B1AAEA76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE258D64-5468-4959-86D8-2BC2B1AAEA76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE258D64-5468-4959-86D8-2BC2B1AAEA76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
