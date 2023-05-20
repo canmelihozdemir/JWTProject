@@ -14,7 +14,7 @@ namespace JWTProject.Core.Services
         Task<ResponseDto<IEnumerable<TDto>>> GetAllAsync();
         Task<ResponseDto<TDto>> AddAsync(TDto entityDto);
         Task<ResponseDto<NoDataDto>> Update(TDto entityDto);
-        Task<ResponseDto<NoDataDto>> Remove(TDto entityDto);
+        Task<ResponseDto<NoDataDto>> Remove(int id);
         Task<ResponseDto<IEnumerable<TDto>>> Where(Expression<Func<TEntity, bool>> predicate);
     }
 }
