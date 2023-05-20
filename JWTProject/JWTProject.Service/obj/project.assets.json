@@ -3438,6 +3438,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 12.0.1",
+      "JWTProject.Core >= 1.0.0",
       "JWTProject.Repository >= 1.0.0"
     ]
   },
@@ -3468,6 +3469,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Core\\JWTProject.Core.csproj": {
+              "projectPath": "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Core\\JWTProject.Core.csproj"
+            },
             "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Repository\\JWTProject.Repository.csproj": {
               "projectPath": "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Repository\\JWTProject.Repository.csproj"
             }
