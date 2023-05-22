@@ -4,11 +4,17 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>048ce7b2-3173-4593-ad34-442815f09dc5</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JWTProject.Service\JWTProject.Service.csproj" />
+    <ProjectReference Include="..\JWTProject.Shared\JWTProject.Shared.csproj" />
   </ItemGroup>
 
 </Project>
