@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,21 @@ namespace JWTProject.Service.Services
         {
             _userManager = userManager;
             _tokenOption = options.Value;
+        }
+
+        private IEnumerable<Claim> GetClaim(UserApp userApp,List<string> audiences)
+        {
+            var userList=new List<Claim>()
+            {
+                new Claim(ClaimTypes.NameIdentifier,userApp.Id),
+                new Claim(JwtRegisteredClaimNames.Email,userApp.Email),
+                new Claim(ClaimTypes.Name,userApp.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
+            };
+
+            userList.AddRange(audiences.Select(x=>new Claim(JwtRegisteredClaimNames.Aud,x)));
+
+            return userList;
         }
 
         private string CreateRefreshToken()
