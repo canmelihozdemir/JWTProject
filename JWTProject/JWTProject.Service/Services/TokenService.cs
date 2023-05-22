@@ -5,6 +5,7 @@ using JWTProject.Core.Services;
 using JWTProject.Shared.Configurations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -66,7 +67,33 @@ namespace JWTProject.Service.Services
 
         public TokenDto CreateToken(UserApp userApp)
         {
-            throw new NotImplementedException();
+            var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
+            var refreshTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.RefreshTokenExpiration);
+            var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey!);
+
+            SigningCredentials signingCredentials = new(securityKey,SecurityAlgorithms.HmacSha256Signature);
+
+            JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(
+                issuer:_tokenOption.Issuer,
+                expires:accessTokenExpiration,
+                notBefore:DateTime.Now,
+                claims:GetClaims(userApp,_tokenOption.Audience!),
+                signingCredentials:signingCredentials);
+
+            var handler = new JwtSecurityTokenHandler();
+
+            var token=handler.WriteToken(jwtSecurityToken);
+
+            var tokenDto = new TokenDto()
+            {
+                AccessToken=token,
+                RefreshToken=CreateRefreshToken(),
+                AccessTokenExpiration=accessTokenExpiration,
+                RefreshTokenExpiration= refreshTokenExpiration
+            };
+
+
+            return tokenDto;
         }
 
         public ClientTokenDto CreateTokenByClient(Client client)
