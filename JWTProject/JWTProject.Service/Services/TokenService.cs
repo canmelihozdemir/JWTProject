@@ -27,19 +27,31 @@ namespace JWTProject.Service.Services
             _tokenOption = options.Value;
         }
 
-        private IEnumerable<Claim> GetClaim(UserApp userApp,List<string> audiences)
+        private IEnumerable<Claim> GetClaims(UserApp userApp,List<string> audiences)
         {
             var userList=new List<Claim>()
             {
                 new Claim(ClaimTypes.NameIdentifier,userApp.Id),
-                new Claim(JwtRegisteredClaimNames.Email,userApp.Email),
-                new Claim(ClaimTypes.Name,userApp.UserName),
+                new Claim(JwtRegisteredClaimNames.Email,userApp.Email!),
+                new Claim(ClaimTypes.Name,userApp.UserName!),
                 new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
             };
 
             userList.AddRange(audiences.Select(x=>new Claim(JwtRegisteredClaimNames.Aud,x)));
 
             return userList;
+        }
+
+        private IEnumerable<Claim> GetClaimsByClient(Client client)
+        {
+            var claims = new List<Claim>();
+
+            claims.AddRange(client.Audiences!.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
+
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString());
+            new Claim(JwtRegisteredClaimNames.Sub, client.Id!.ToString());
+
+            return claims;
         }
 
         private string CreateRefreshToken()
