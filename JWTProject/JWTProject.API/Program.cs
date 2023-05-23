@@ -1,3 +1,4 @@
+using JWTProject.Core.Configurations;
 using JWTProject.Shared.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //
 builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
+builder.Services.Configure<Client>(builder.Configuration.GetSection("Clients"));
 //
 
 builder.Services.AddControllers();
