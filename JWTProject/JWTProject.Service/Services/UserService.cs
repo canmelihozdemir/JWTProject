@@ -38,9 +38,13 @@ namespace JWTProject.Service.Services
             return ResponseDto<UserAppDto>.Success(ObjectMapper.Mapper.Map<UserAppDto>(user),201);
         }
 
-        public Task<ResponseDto<UserAppDto>> GetUserByNameAsync(string userName)
+        public async Task<ResponseDto<UserAppDto>> GetUserByNameAsync(string userName)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByNameAsync(userName);
+
+            if (user == null) return ResponseDto<UserAppDto>.Fail("Username not found", 404, true);
+
+            return ResponseDto<UserAppDto>.Success(ObjectMapper.Mapper.Map<UserAppDto>(user), 201);
         }
     }
 }
