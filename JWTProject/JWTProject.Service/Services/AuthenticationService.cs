@@ -73,14 +73,36 @@ namespace JWTProject.Service.Services
             return ResponseDto<ClientTokenDto>.Success(token,200);
         }
 
-        public Task<ResponseDto<TokenDto>> CreateTokenByRefreshTokenAsync(string refreshToken)
+        public async Task<ResponseDto<TokenDto>> CreateTokenByRefreshTokenAsync(string refreshToken)
         {
-            throw new NotImplementedException();
+            var existRefreshToken = await _userRefreshTokenRepository.Where(x=>x.Code==refreshToken).SingleOrDefaultAsync();
+
+            if (existRefreshToken == null) return ResponseDto<TokenDto>.Fail("Refresh token not found",404,true);
+
+            var user = await _userManager.FindByIdAsync(existRefreshToken.UserId);
+
+            if (user == null) return ResponseDto<TokenDto>.Fail("UserId not found", 404, true);
+
+            var tokenDto=_tokenService.CreateToken(user);
+            existRefreshToken.Code = tokenDto.RefreshToken;
+            existRefreshToken.Expiration = tokenDto.RefreshTokenExpiration;
+
+            await _unitOfWork.CommitAsync();
+
+            return ResponseDto<TokenDto>.Success(tokenDto, 200);
         }
 
-        public Task<ResponseDto<NoDataDto>> RevokeRefreshTokenAsync(string refreshToken)
+        public async Task<ResponseDto<NoDataDto>> RevokeRefreshTokenAsync(string refreshToken)
         {
-            throw new NotImplementedException();
+            var existRefreshToken = await _userRefreshTokenRepository.Where(x=>x.Code==refreshToken).SingleOrDefaultAsync();
+
+            if (existRefreshToken == null) return ResponseDto<NoDataDto>.Fail("Refresh token not found", 404, true);
+
+            _userRefreshTokenRepository.Remove(existRefreshToken);
+
+            await _unitOfWork.CommitAsync();
+
+            return ResponseDto<NoDataDto>.Success(200);
         }
     }
 }
