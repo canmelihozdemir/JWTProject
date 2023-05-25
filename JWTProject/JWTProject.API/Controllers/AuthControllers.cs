@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JWTProject.API.Controllers
 {
+    [Route("api/[controller]/[action]")]
+    [ApiController]
     public class AuthControllers : CustomBaseControllers
     {
         private readonly IAuthenticationService _authenticationService;
