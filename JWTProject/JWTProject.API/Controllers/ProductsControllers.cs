@@ -25,7 +25,7 @@ namespace JWTProject.API.Controllers
 
         [HttpPut] public async Task<IActionResult> Update(ProductDto productDto) => ActionResultInstance(await _service.Update(productDto, productDto.Id));
 
-        [HttpDelete] public async Task<IActionResult> Delete(int id) => ActionResultInstance(await _service.Remove(id));
+        [HttpDelete("{id}")] public async Task<IActionResult> Delete(int id) => ActionResultInstance(await _service.Remove(id));
 
 
 
