@@ -10,6 +10,7 @@ using JWTProject.Shared.Configurations;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +45,8 @@ builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clien
 
 
 
+
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -53,9 +56,9 @@ builder.Services.AddAuthentication(options =>
     var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>();
     opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
     {
-        ValidIssuer = tokenOptions.Issuer,
-        ValidAudience = tokenOptions.Audience[0],
-        IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
+        ValidIssuer = tokenOptions?.Issuer,
+        ValidAudience = tokenOptions?.Audience[0],
+        IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions?.SecurityKey!),
         ValidateIssuerSigningKey=true,
         ValidateAudience=true,
         ValidateIssuer=true,

@@ -38,11 +38,11 @@ namespace JWTProject.Service.Services
         {
             if (loginDto == null) throw new ArgumentNullException(nameof(loginDto));
 
-            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            var user = await _userManager.FindByEmailAsync(loginDto.Email!);
 
             if (user == null) return ResponseDto<TokenDto>.Fail("Email or Password wrong",400,true);
 
-            if (!(await _userManager.CheckPasswordAsync(user,loginDto.Password))) return ResponseDto<TokenDto>.Fail("Email or Password wrong", 400, true);
+            if (!(await _userManager.CheckPasswordAsync(user,loginDto.Password!))) return ResponseDto<TokenDto>.Fail("Email or Password wrong", 400, true);
 
             var token = _tokenService.CreateToken(user);
             var userRefreshToken = await _userRefreshTokenRepository.Where(x=>x.UserId==user.Id).SingleOrDefaultAsync();
