@@ -3,6 +3,7 @@ using JWTProject.Core.DTOs;
 using JWTProject.Core.Models;
 using JWTProject.Core.Services;
 using JWTProject.Shared.Configurations;
+using JWTProject.Shared.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

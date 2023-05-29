@@ -33,3 +33,10 @@ C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\obj\De
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\obj\Debug\net7.0\ref\JWTMiniApp2.API.dll
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\JWTProject.Shared.dll
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\JWTProject.Shared.pdb
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTMiniApp2.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

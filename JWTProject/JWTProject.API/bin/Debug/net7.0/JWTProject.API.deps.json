@@ -784,6 +784,9 @@
         }
       },
       "JWTProject.Shared/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.5"
+        },
         "runtime": {
           "JWTProject.Shared.dll": {}
         }

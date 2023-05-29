@@ -7,6 +7,7 @@ using JWTProject.Repository;
 using JWTProject.Repository.Repositories;
 using JWTProject.Service.Services;
 using JWTProject.Shared.Configurations;
+using JWTProject.Shared.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -44,28 +45,8 @@ builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clien
 
 
 
-
-
-
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme= JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
-{
-    var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>();
-    opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
-    {
-        ValidIssuer = tokenOptions?.Issuer,
-        ValidAudience = tokenOptions?.Audience[0],
-        IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions?.SecurityKey!),
-        ValidateIssuerSigningKey=true,
-        ValidateAudience=true,
-        ValidateIssuer=true,
-        ValidateLifetime=true,
-        ClockSkew=TimeSpan.Zero
-    };
-});
+var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>();
+builder.Services.AddCustomTokenAuth(tokenOptions!);
 
 
 

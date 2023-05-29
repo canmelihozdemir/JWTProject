@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GQsWqxvYWF2Lgs5KQk5KTc5xSvZMgWG3m6tEuOmT9xor7f6eFmKun8+/mf8rOiYfhCaysp2c8tF9/LoSIRMMhw==",
+  "dgSpecHash": "+HDV0xSIAdeHaDI+7CW44fRmCsDPrxNUPDi0QAdhBTaPQsJ4uMS4DQIVfceC+hQBYpKzuhhu7Ac5jIlHuuL42g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Melih\\Desktop\\Melih\\projeler\\C#23\\JWT\\JWTProject\\JWTProject.Repository\\JWTProject.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Melih\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.5\\microsoft.aspnetcore.authentication.jwtbearer.7.0.5.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.5\\microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.5.nupkg.sha512",

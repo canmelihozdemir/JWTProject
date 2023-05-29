@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("519d6a8f-a1b2-4bc0-a641-c4b18e738e70")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("JWTMiniApp1.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
