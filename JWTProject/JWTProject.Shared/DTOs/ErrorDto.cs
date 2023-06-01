@@ -8,13 +8,10 @@ namespace JWTProject.Shared.DTOs
 {
     public class ErrorDto
     {
-        public List<string> Errors { get;private set; }
+        public List<string> Errors { get;private set; } = new();
         public bool IsShow { get;private set; }
 
-        public ErrorDto()
-        {
-            Errors = new();
-        }
+     
 
         public ErrorDto(string error,bool isShow)
         {
