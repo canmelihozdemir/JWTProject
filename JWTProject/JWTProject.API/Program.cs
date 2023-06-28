@@ -53,11 +53,17 @@ builder.Services.AddCustomTokenAuth(tokenOptions!);
 
 
 
+
+
+
 builder.Services.AddControllers().AddFluentValidation(options =>
 {
     options.RegisterValidatorsFromAssemblyContaining<Program>();
 });
 
+
+
+builder.Services.AddCustomValidationReponse();
 
 //
 

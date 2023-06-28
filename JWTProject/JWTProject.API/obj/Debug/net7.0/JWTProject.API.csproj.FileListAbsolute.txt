@@ -90,3 +90,6 @@ C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.API\bin\Deb
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.API\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.API\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.API\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.API\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Users\Melih\Desktop\Melih\projeler\C#23\JWT\JWTProject\JWTProject.API\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
