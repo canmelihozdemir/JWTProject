@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using JWTProject.Core.Configurations;
 using JWTProject.Core.Models;
 using JWTProject.Core.Repositories;
@@ -50,9 +51,15 @@ builder.Services.AddCustomTokenAuth(tokenOptions!);
 
 
 
-//
 
-builder.Services.AddControllers();
+
+builder.Services.AddControllers().AddFluentValidation(options =>
+{
+    options.RegisterValidatorsFromAssemblyContaining<Program>();
+});
+
+
+//
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
