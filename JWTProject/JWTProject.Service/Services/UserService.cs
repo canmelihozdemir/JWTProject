@@ -3,6 +3,7 @@ using JWTProject.Core.Models;
 using JWTProject.Core.Services;
 using JWTProject.Service.Mapping;
 using JWTProject.Shared.DTOs;
+using JWTProject.Shared.Exceptions;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,8 @@ namespace JWTProject.Service.Services
 
         public async Task<ResponseDto<UserAppDto>> CreateUserAsync(CreateUserDto createUserDto)
         {
+            //throw new CustomException("Random Error for Test");
+
             var user = new UserApp { Email=createUserDto.Email,UserName=createUserDto.UserName};
 
             var result = await _userManager.CreateAsync(user,createUserDto.Password);

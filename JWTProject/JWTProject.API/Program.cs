@@ -8,6 +8,7 @@ using JWTProject.Repository;
 using JWTProject.Repository.Repositories;
 using JWTProject.Service.Services;
 using JWTProject.Shared.Configurations;
+using JWTProject.Shared.Exceptions;
 using JWTProject.Shared.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -73,11 +74,22 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else
+{
+//
+    //app.UseCustomException(); For Production
+}
+
+app.UseCustomException();
+
+//
 
 app.UseHttpsRedirection();
 
