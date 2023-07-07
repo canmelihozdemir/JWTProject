@@ -4,6 +4,7 @@ using JWTProject.Core.Services;
 using JWTProject.Service.Mapping;
 using JWTProject.Shared.DTOs;
 using JWTProject.Shared.Exceptions;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,12 @@ namespace JWTProject.Service.Services
     public class UserService : IUserService
     {
         private readonly UserManager<UserApp> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public UserService(UserManager<UserApp> userManager)
+        public UserService(UserManager<UserApp> userManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         public async Task<ResponseDto<UserAppDto>> CreateUserAsync(CreateUserDto createUserDto)
@@ -39,6 +42,24 @@ namespace JWTProject.Service.Services
             }
 
             return ResponseDto<UserAppDto>.Success(ObjectMapper.Mapper.Map<UserAppDto>(user),201);
+        }
+
+        public async Task<ResponseDto<NoDataDto>> CreateUserRolesAsync(string userName,string roleName)
+        {
+            if (!await _roleManager.RoleExistsAsync("admin"))
+            {
+                await _roleManager.CreateAsync(new() { Name="admin"});
+                await _roleManager.CreateAsync(new() { Name="manager"});
+                
+            }
+
+            var user=await _userManager.FindByNameAsync(userName);
+
+            if (user == null) return ResponseDto<NoDataDto>.Fail("Username not found", 404, true);
+
+            await _userManager.AddToRoleAsync(user, roleName);
+
+            return ResponseDto<NoDataDto>.Success(StatusCodes.Status201Created);
         }
 
         public async Task<ResponseDto<UserAppDto>> GetUserByNameAsync(string userName)

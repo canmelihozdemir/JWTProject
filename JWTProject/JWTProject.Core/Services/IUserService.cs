@@ -12,5 +12,6 @@ namespace JWTProject.Core.Services
     {
         Task<ResponseDto<UserAppDto>> CreateUserAsync(CreateUserDto createUserDto);
         Task<ResponseDto<UserAppDto>> GetUserByNameAsync(string userName);
+        Task<ResponseDto<NoDataDto>> CreateUserRolesAsync(string userName, string roleName);
     }
 }

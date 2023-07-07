@@ -21,6 +21,7 @@ namespace JWTProject.API.Controllers
 
         [Authorize][HttpGet] public async Task<IActionResult> GetUserAsync() => ActionResultInstance(await _userService.GetUserByNameAsync(HttpContext.User.Identity!.Name!));
 
+        [HttpPost("CreateUserRolesAsync")] public async Task<IActionResult> CreateUserRolesAsync(string userName,string roleName) => ActionResultInstance(await _userService.CreateUserRolesAsync(userName,roleName));
 
     }
 }

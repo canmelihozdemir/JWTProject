@@ -29,8 +29,12 @@ namespace JWTProject.Service.Services
             _tokenOption = options.Value;
         }
 
-        private IEnumerable<Claim> GetClaims(UserApp userApp,List<string> audiences)
+        private async Task<IEnumerable<Claim>> GetClaims(UserApp userApp,List<string> audiences)
         {
+            var userRoles=await _userManager.GetRolesAsync(userApp);
+
+
+
             var userList=new List<Claim>()
             {
                 new Claim(ClaimTypes.NameIdentifier,userApp.Id),
@@ -40,6 +44,7 @@ namespace JWTProject.Service.Services
             };
 
             userList.AddRange(audiences.Select(x=>new Claim(JwtRegisteredClaimNames.Aud,x)));
+            userList.AddRange(userRoles.Select(x=>new Claim(ClaimTypes.Role,x)));
 
             return userList;
         }
@@ -78,7 +83,7 @@ namespace JWTProject.Service.Services
                 issuer:_tokenOption.Issuer,
                 expires:accessTokenExpiration,
                 notBefore:DateTime.Now,
-                claims:GetClaims(userApp,_tokenOption.Audience!),
+                claims:GetClaims(userApp,_tokenOption.Audience!).Result,
                 signingCredentials:signingCredentials);
 
             var handler = new JwtSecurityTokenHandler();
